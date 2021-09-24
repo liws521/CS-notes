@@ -1,0 +1,25 @@
+
+- 约束用于确保数据库的数据满足特定的商业规则
+# mysql中的约束有:
+- not null
+- unique
+    - 如果没有指定非空, unique字段可以有多个null
+    - 一张表中unique字段的数量没有限制
+- primary key
+    - 主键的字段不可重复且不可为null
+    - 一张表最多只能有一个主键, 但是可以是复合主键
+    - 主键的指定方式有两种
+        - field_name type primary key
+        - 表定义的最后写 primary key(列名)
+    - DESC tb_name 可以看到表的结构情况
+- foreign key
+    - foreign key (外键列) reference 主表名(引用列)
+    - 外键用于定义主表和从表之间的关系, 外键约束要定义在从表上
+    - 主表中被引用的列必须是主键或者unique
+    - 当定义外键约束后, 要求外键列数据必须在主表的主键列存在或是为null
+    - 表的引擎为innodb才支持外键
+    - 外键字段和引用字段的类型需要一致, 长度可以不同
+    - 一旦建立起外键关系, 被引用的数据就不能随意删除了
+- check
+    - oracle和sql server支持, mysql5.7不生效, 只做语法检查
+
