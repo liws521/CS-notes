@@ -91,3 +91,12 @@
     - onmousedown鼠标按下, onmouseup鼠标松开
 - 键盘事件
     - onkeydown键盘按下, onkeyup键盘松开
+
+
+## C13 window对象
+- 一个窗口就是一个window对象，这个窗口里面的HTML文档就是一个document对象，document对象是window对象的子对象
+- 对于window对象，无论是它的属性，还是方法，都可以省略window前缀
+    - window.alert() -> alert()
+- window.open(url, target), 返回一个窗口对象
+    - url指的是新窗口的地址，如果url为空，则表示打开一个空白窗口。空白窗口很有用，我们可以使用document.write（　）往空白窗口输出文本，甚至输出一个HTML页面
+    - target表示打开方式，它的取值跟a标签中target属性的取值是一样的，常用取值有两个：_blank和_self。当target为“_blank（默认值）”时，表示在新窗口中打开；当target为“_self”时，表示在当前窗口中打开
