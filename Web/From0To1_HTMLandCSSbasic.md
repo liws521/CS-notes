@@ -1,6 +1,13 @@
 # Meta
-- 有Markdown的基础看HTML都很简单
-
+- 从0到1系列, 前端开发路线最好的教程之一, 这本是入门之作, 也是写的几乎最好的入门之作(这也有一部分前端入门框架比较清晰的原因), 几乎不需要什么前置基础知识, 不过具备一定的英语基础更好, 建议看这个之前可以先多熟悉一下Markdown, 用Markdown记笔记极致体验, 了解了Markdown后再看这本书就level 0了.
+- 而且作者的学习理念我很喜欢, 对于初学者来说，千万别想着精通了一门技术，再去精通另一门技术, 只有“通”十行才可能做到“精”一行, 我不是做前端的, 但是多对其他领域通一通终归是有益的, 不要报着吹毛求疵的心, 完美是幸福的敌人.
+- 学习过程中的一个重要问题就是记忆的压力, 尽管作者已经尽可能的告知哪些在开发中常用, 哪些无需记忆, 但常用的罗列下来还是数量不菲. 计算机的学习从来不是靠头脑记忆, 计算机是一门"做中学"学科, 不需要把知识点背下来再动手, 而是先去做, 忘了一个查一个, 才最符合记忆曲线.
+- 这里可能会涉及到一个疑问, "既然我能在不会一个东西的时候去查, 那我为什么还要这种系统的读书学习过程呢?" 在这里给出一份解答, 我们对知识的掌握, 分为已知, 对未知的已知, 对未知的未知, 也就是说有一些知识我们是不知道我们不知道的, 对于这部分我们往往无能为力, 所以系统读书学习上课的过程, 就是尽可能的将对未知的未知转化为对未知的已知, 我们可以记不下来具体的语句怎么写, 但要知道有这么一个东西可以解决这样的问题, 查询的时候有所方向, 这也和前些年主流的"无需记忆知识, 只需记忆知识存储的位置"观点有相似之处, 但还是有所不同的, 我的CS方法论最终是需要记忆知识的, 只不过是通过一次一次"用-学-用"反馈进行记忆, 而非大块记忆, 也并非前述观点的只记忆知识的位置.
+- 在Mac下取名`从0到1: HTML+CSS快速入门`, 从Win端git pull时出现invalid path error, 因为是跨系统工作, 所以对文件命名时还是尽量注意一点, 英文优先于汉字, 不要使用特殊符号
+## 后序学习顺序
+- 《从0到1：HTML+CSS快速上手》→《从0到1：CSS进阶之旅》→《从0到1：JavaScript快速上手》→《从0到1：jQuery快速上手》→《从0到1：HTML5+CSS3修炼之道》→《从0到1：HTML5 Canvas动画开发》→未完待续
+- 1．仿照百度首页，自己动手还原出来。说明：模仿还原网站是初学者最佳的实践方式，而百度首页往往是最适合初学者练习的第一个页面
+- 2．打造一个属于自己的博客网站。
 - 前言
     - 如果你需要的不是大而全，而是恰到好处的前端开发教程，那么不妨试着看一下这本书
     - [绿叶学习网](www.lvyestudy.com)
@@ -129,15 +136,84 @@
 - 在HTML中，我们可以使用iframe标签来实现一个内嵌框架。内嵌框架，是指在当前页面再嵌入另外一个网页
 
 # CSS基础
+- `/*CSS注释*/`
 ## C11 CSS简介
 - CSS2.1 + CSS3
 - CSS引入方式
     - 外部样式表是最理想的CSS引入方式。在实际开发中，为了提升网站的性能速度和可维护性，一般都会使用外部样式表。所谓的外部样式表，指的是把CSS代码和HTML代码单独放在不同文件中，然后在HTML文件中使用link标签来引用CSS文件。
         - `<link rel="stylesheet" type="text/css" href="my_path" />`
-    - 内部样式表，指的是把HTML代码和CSS代码放到同一个HTML文件中。其中，CSS代码放在style标签内，style标签是放在head标签内部的
+    - 内部样式表，指的是把HTML代码和CSS代码放到同一个HTML文件中。其中，CSS代码放在style标签内，style标签是放在head标签内部的, `<style type="text/css">`
     - 行内样式表与内部样式表类似，也是把HTML代码和CSS代码放到同一个HTML文件。但是两者有着本质的区别：内部样式表的CSS是在“style标签”内定义的，而行内样式表的CSS是在“标签的style属性”中定义的
 ## C12 CSS选择器
 - 元素的id和class, 同一页面id各不相同, class把一些归类
 - 元素选择器, id选择器(#), class选择器(用.)
 - 后代选择器, 群组选择器
 ## C13 字体样式
+- font-family字体类型, 默认宋体, 可以指定多个字体, 电脑没安装前面的就用后面的, font-family: 字体1,字体2,字体3;
+- font-size:像素值; 字体大小, 以px为单位
+- font-weight:bold; 字体粗细, bold是较粗
+- font-sytle, 控制斜体
+- color:颜色值; 填关键字或十六进制RGB, 字体颜色
+## C14 文本样式
+- text-indent:像素值; 首行缩进, 设置像素值为font-size的2倍就能做到空2个字符了
+- text-align:取值; 水平对齐, 取值center居中对齐
+- text-decoration:underline; 装饰, 控制上下中划线, 用HTML也能做划线, 但前端开发中外观用CSS来做, 遵守结构和样式分类的原则, 提高代码的可读性and可维护性.
+    - 还可以用none值去除超链接a自带的下划线
+- text-transform:uppercase; 大小写转换, capitalize是首字母大写
+- line-height:像素值; 行高
+- letter-spacing:像素值; 字母间距, 汉字间距
+- word-spacing:像素值; 单词间距, 只针对英文单词
+## C15 边框样式
+- 几乎所有的元素都可以定义边框
+- border-width:像素值; 边框宽度
+- border-style:solid; 边框外观, 实线虚线
+- border-color:red; 边框颜色, 关键字or十六进制RGB
+- 简写 border:1px solid red;
+- 上边框border-top, 下border-bottom, 左border-left, 右border-right, 单独设置局部的一条边, 用法同整体边框border一样
+## C16 列表样式
+- list-style-type, 控制ol或ul, 有时用none去除自带的样式
+- list-style-image:url(图片路径); 用图片来代替列表项符号, 这个可能很好看(花里胡哨)
+    - 一般情况下我们都不会用liststyle-image属性来实现，而是使用更为高级的iconfont图标技术来实现，这个我们在本系列的《从0到1：CSS进阶之旅》这本书中再详细介绍
+## C17 表格样式
+- caption-side:bottom; 把表格标题放下面
+- border-collapse:collapse; 去除单元格空隙
+- border-spacing:像素值; 表格边框间距
+## C18 图片样式
+- width, height, 像素值
+- border:1px solid reg; 图片边框
+- text-align:center/left/right; 图片水平对齐
+- vertical-align:top/bottom/middle/baseline; 图片垂直对齐
+- float:left/right; 图文混排, 字体环绕
+## C19 背景样式
+- background-color:颜色; 背景颜色
+- background-image:url(图片路径); 
+- background-repead:repeat-x; div能放好几个图片的时候如何重复
+- background-position:2px 3px; 从左上角为原点, 2,3 位置放图片, 也可以用关键字
+- background-attachment:scroll; 随元素滚动, 或者fixed固定不动.
+## C20 超链接样式
+- 超链接伪类, a:link未访问, a:visited访问后, a:hover鼠标经过, a:active鼠标单击激活
+    - 按顺序写, love-hate
+- 任意元素:hover{}, 定义该元素在鼠标经过的样子
+- 鼠标样式
+    - 浏览器鼠标样式, cursor:default/pointer/text;
+    - 自定义鼠标样式, cursor:url(图片地址), 属性值; 一般是.cur后缀名的图片, 搜一搜
+## C21 盒子模型
+- 所有的元素都可以看成一个盒子
+![1634094037(1).png](https://pic.rmb.bdstatic.com/bjh/9ff6c58b4fea41c7cbb3ccb4d58f8e97.png)
+- 内容区content, width/height/overflow属性
+    - 只有块元素才可以设置width和height，行内元素是无法设置width和height的
+- 内边距padding
+- 外边距margin, "负margin技术"
+- 边框border
+- padding:1px 2px 3px 4px; 上右下左
+- margin也是上右下左
+- 使用浏览器控制台辅助开发，是前端开发必备的一项基础技能
+## C22 浮动布局
+- 正常文档流, 通过浮动float:left/right; 脱离正常文档流, 达到浮动布局的效果
+- clear:both; 清除浮动
+## C23 定位布局
+- CSS定位使你可以将一个元素精确地放在页面上指定的地方
+- position:fixed; 固定定位
+- position:relative; 相对定位
+- position:absolute; 绝对定位, 使用广泛. 脱离文档流
+- position:静态定位; 默认是静态的
