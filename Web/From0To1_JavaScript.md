@@ -92,7 +92,27 @@
 - 键盘事件
     - onkeydown键盘按下, onkeyup键盘松开
 
+- 表单事件
+    - onfocus获取焦点, onblur失去焦点, 比如点文本框想输入东西, 文本框获取光标, 只有表单和超链接有焦点事件
 
+## C12 事件进阶
+- 事件监听器, 可以为同一个元素添加多个相同的事件
+    - obj.addEventListener(type, fn, false)
+    - type是个string, 事件类型, 比如"click", 不需要加on
+    - fn是个函数名, 或者是个匿名函数
+    - false表示事件冒泡阶段调用
+    - ogj.removeEventListener(type, fn, false), 解绑
+    - fn一定需要是函数名, 不能是匿名函数
+
+- event对象, 一个事件对应一个event对象
+    - event对象在IE8浏览器及以下版本还有一定的兼容性, 可能还需要采取“var e=e||window.event;”来处理
+    - type事件类型
+    - keyCode 键码值
+    - shiftKey 是否按下Shift
+    - ctrlkey 是否按下Ctrl
+    - altKey 是否按下Alt
+- this
+    - 
 ## C13 window对象
 - 一个窗口就是一个window对象，这个窗口里面的HTML文档就是一个document对象，document对象是window对象的子对象
 - 对于window对象，无论是它的属性，还是方法，都可以省略window前缀

@@ -6,3 +6,5 @@
 - [HITSZ-OpenCS](https://github.com/hewei2001/HITSZ-OpenCS)
 
 - [HelloGitHub](https://github.com/521xueweihan/HelloGitHub)
+
+- [CS-Wiki](https://github.com/Veal98/CS-Wiki)

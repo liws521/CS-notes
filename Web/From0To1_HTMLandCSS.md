@@ -213,7 +213,9 @@
 - clear:both; 清除浮动
 ## C23 定位布局
 - CSS定位使你可以将一个元素精确地放在页面上指定的地方
-- position:fixed; 固定定位
-- position:relative; 相对定位
-- position:absolute; 绝对定位, 使用广泛. 脱离文档流
+- position:fixed; 固定定位, 被固定的元素不会随滚动条的拖动而改变位置
+    - top, bottom, left, right四个属性, 参考对象是浏览器的四条边, 
+- position:relative; 相对定位, 相对其原始位置
+- position:absolute; 绝对定位, 使用广泛. 脱离文档流, 前后元素会认为这个元素不存在, 这个元素就可以浮在其他元素上面
+    - 默认情况, 参考对象是浏览器的四条边
 - position:静态定位; 默认是静态的
