@@ -120,3 +120,4 @@
 - window.open(url, target), 返回一个窗口对象
     - url指的是新窗口的地址，如果url为空，则表示打开一个空白窗口。空白窗口很有用，我们可以使用document.write（　）往空白窗口输出文本，甚至输出一个HTML页面
     - target表示打开方式，它的取值跟a标签中target属性的取值是一样的，常用取值有两个：_blank和_self。当target为“_blank（默认值）”时，表示在新窗口中打开；当target为“_self”时，表示在当前窗口中打开
+- alert("abc\n"), comfirm("abc\n")用户点确定返回true, 点取消返回false, prompt("abc\n")返回一个用户输入的字符串
