@@ -42,3 +42,16 @@
 - 适合用这个给列表的每个子项设置不同的样式
 
 ### "可见性"伪类选择器
+
+
+## C6 事件基础
+### 6.1 事件简介
+- 事件主角
+- 事件类型
+- 事件过程
+### 6.2 页面事件
+- js中window.onload = function(){...} -> jQuery中ready事件$(document).ready(function(){...})
+- jQuery的ready事件仅仅是DOM元素加载完成就可以执行，而JavaScript的onload事件在DOM元素加载完成后还需要等所有外部文件也加载完成才可以执行。
+    - 很明显，jQuery的ready事件相对于JavaScript的onload事件来说，极大地提高页面的响应速度，有着更好的用户体验
+- 四种写法之推荐写法, $(function(){...})
+- 在JavaScript中，window.onload只能调用一次，如果多次调用，则只会执行最后一个, 但是在jQuery中，ready事件是可以多次执行的。从这里可以看出jQuery有非常良好的兼容性
