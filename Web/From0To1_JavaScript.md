@@ -115,9 +115,33 @@
     - 
 ## C13 window对象
 - 一个窗口就是一个window对象，这个窗口里面的HTML文档就是一个document对象，document对象是window对象的子对象
+- window对象及下面这些location、navigator等子对象，由于都是用于操作浏览器窗口的，所以我们又称之为“BOM”，也就是Browser Object Module（浏览器对象模型）
+## 常用方法
 - 对于window对象，无论是它的属性，还是方法，都可以省略window前缀
     - window.alert() -> alert()
-- window.open(url, target), 返回一个窗口对象
-    - url指的是新窗口的地址，如果url为空，则表示打开一个空白窗口。空白窗口很有用，我们可以使用document.write（　）往空白窗口输出文本，甚至输出一个HTML页面
+- window.open(url, target), 返回一个窗口对象, 这个返回的窗口对象w.document.write, 就可以写东西啦
+    - url指的是新窗口的地址，如果url为空，则表示打开一个空白窗口。空白窗口很有用，我们可以使用document.write()往空白窗口输出文本，甚至输出一个HTML页面
     - target表示打开方式，它的取值跟a标签中target属性的取值是一样的，常用取值有两个：_blank和_self。当target为“_blank（默认值）”时，表示在新窗口中打开；当target为“_self”时，表示在当前窗口中打开
+    - 有一点需要提醒大家：如果你打开的是同一个域名下的页面或空白窗口，就可以像上面那样操作新窗口的元素或样式；但是如果你打开的是另外一个域名下的页面，是不允许操作新窗口的内容的，因为涉及跨域的问题
+    - w.close()
 - alert("abc\n"), comfirm("abc\n")用户点确定返回true, 点取消返回false, prompt("abc\n")返回一个用户输入的字符串
+## 定时器
+- var timer = setTimeOut(code, time), clearTimeout(timer)
+    - code可以放
+        - 需要引号的, '一段代码', '函数名()'
+        - 无需引号的, 匿名函数, 函数名
+    - time的单位是ms
+- setInterval, clearInterval
+## location对象
+- location对象 -> 当前窗口的URL
+- href, -> window.location.href
+- search ?后面的内容
+- hash #后面的内容
+## navigator对象
+
+
+# C14 document对象
+- DOM(文档对象模型)
+- document.title, document.body
+- document.URL只读, window.location.href读写
+- A跳到B, 在B用document.referrer获取A的地址
